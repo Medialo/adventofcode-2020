@@ -6,7 +6,8 @@ link: https://adventofcode.com/2020
 | ------ | ------ |
 | 1 | Done |
 | 2 | Done |
-| 3 | in progress |
+| 3 | Done |
+| 4 | in progress |
 
 ----
 License

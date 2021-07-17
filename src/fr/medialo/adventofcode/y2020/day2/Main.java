@@ -13,15 +13,15 @@ public class Main {
     public static void main(String[] args) {
         int result = 0;
         Path path = Paths.get("resource/day2.txt");
-        try(BufferedReader bfr = new BufferedReader(new FileReader(path.toFile()))){
+        try (BufferedReader bfr = new BufferedReader(new FileReader(path.toFile()))) {
             Pattern p = Pattern.compile("([0-9]+)-([0-9]+) (.): (.+)");
             Matcher m;
             String str;
-            while ((str = bfr.readLine()) != null){
+            while ((str = bfr.readLine()) != null) {
                 m = p.matcher(str);
-                if(m.find())
-                    if(Password.isValid(Integer.parseInt(m.group(1)),Integer.parseInt(m.group(2)), m.group(3).charAt(0), m.group(4))){
-                       result++;
+                if (m.find())
+                    if (Password.isValid(Integer.parseInt(m.group(1)), Integer.parseInt(m.group(2)), m.group(3).charAt(0), m.group(4))) {
+                        result++;
                     }
             }
         } catch (IOException e) {

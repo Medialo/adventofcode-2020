@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -21,9 +20,9 @@ public class Main {
         Path path = Paths.get("resource/day3.txt");
         List<String> strings = new LinkedList<>();
         int result = 0;
-        try(BufferedReader bfr = new BufferedReader(new FileReader(path.toFile()))){
+        try (BufferedReader bfr = new BufferedReader(new FileReader(path.toFile()))) {
             String str;
-            while ((str = bfr.readLine()) != null){
+            while ((str = bfr.readLine()) != null) {
                 strings.add(str);
             }
         } catch (IOException e) {
@@ -35,14 +34,14 @@ public class Main {
         for (int i = 0; i < LIST_SIZE; i++) {
             chars[i] = strings.get(i).toCharArray();
         }
-        int x= 0,y = 0;
-        while(true){
-            x+=DOWN;
-            if(x >= LIST_SIZE)
+        int x = 0, y = 0;
+        while (true) {
+            x += DOWN;
+            if (x >= LIST_SIZE)
                 break;
-            y = (y + RIGHT)%LINE_LENGTH;
+            y = (y + RIGHT) % LINE_LENGTH;
             System.out.println(y);
-            if(chars[x][y] == TREE)
+            if (chars[x][y] == TREE)
                 result++;
         }
         System.out.println(result);

@@ -7,9 +7,12 @@ link: https://adventofcode.com/2020
 | 1 | Done |
 | 2 | Done |
 | 3 | Done |
-| 4 | in progress |
+| 4 | Done |
+| 5 | Done |
+| 6 | Done |
+| 7 | in progress |
 
 ----
 License
 ----
-MIT
+AGPL

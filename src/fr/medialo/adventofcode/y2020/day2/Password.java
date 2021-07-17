@@ -13,6 +13,16 @@ public class Password {
         this.password = password;
     }
 
+    public static boolean isValid(int min, int max, char letter, String password) {
+        int i = 0;
+        for (char c : password.toCharArray()) {
+            if (letter == c) {
+                i++;
+            }
+        }
+        return i <= max && i >= min;
+    }
+
     public int getMin() {
         return min;
     }
@@ -29,17 +39,7 @@ public class Password {
         return password;
     }
 
-    public boolean isValid(){
-        return isValid(this.min,this.max,this.letter,this.password);
-    }
-
-    public static boolean isValid(int min, int max, char letter, String password){
-        int i = 0;
-        for (char c : password.toCharArray()){
-            if (letter == c){
-                i++;
-            }
-        }
-        return i <= max && i>= min;
+    public boolean isValid() {
+        return isValid(this.min, this.max, this.letter, this.password);
     }
 }
